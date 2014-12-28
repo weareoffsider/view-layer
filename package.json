@@ -1,0 +1,21 @@
+{
+  "name": "view-layer",
+  "version": "0.1.0",
+  "description": "View Layer Server for rendering templates in support of a more featured backend server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Offsider",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.10.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "express": "^4.10.6",
+    "jade": "^1.8.2",
+    "lodash": "^2.4.1",
+    "react": "^0.12.2"
+  }
+}
