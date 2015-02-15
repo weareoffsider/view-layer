@@ -29,6 +29,10 @@ module.exports = function() {
       });
     },
 
+    configApp: function(cb) {
+      cb(viewApp);
+    },
+
     listen: function(port, hostname, backlog, callback) {
       viewApp.listen(port, hostname, backlog, callback);
     }
