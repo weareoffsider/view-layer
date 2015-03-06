@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
 
+## 0.4.1 - 2015-03-07
+### Fixed
+- fixed result ommission on put requests
+
 ## 0.4.0 - 2015-03-07
 ### Changed
 - support promises as handler results

@@ -33,6 +33,8 @@ module.exports = function() {
         _.assign(args, req.params);
         _.assign(args, req.body);
 
+        var result = handler(args);
+
         if (result.then) {
           result.then(function(out) {
             res.type("html").send( out );
