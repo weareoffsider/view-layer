@@ -16,7 +16,15 @@ module.exports = function() {
         _.assign(args, opts.defaults);
         _.assign(args, req.params);
 
-        res.type("html").send( handler(args) );
+        var result = handler(args);
+
+        if (result.then) {
+          result.then(function(out) {
+            res.type("html").send( out );
+          });
+        } else {
+          res.type("html").send( result );
+        };
       });
 
       viewApp.put(routePath, function(req, res) {
@@ -25,7 +33,13 @@ module.exports = function() {
         _.assign(args, req.params);
         _.assign(args, req.body);
 
-        res.type("html").send( handler(args) );
+        if (result.then) {
+          result.then(function(out) {
+            res.type("html").send( out );
+          });
+        } else {
+          res.type("html").send( result );
+        };
       });
     },
 
