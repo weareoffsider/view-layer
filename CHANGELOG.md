@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased Changes
 
+## 0.5.0 - 2015-05-06
+### Added
+- added options to config bodyParser
+
 ## 0.4.1 - 2015-03-07
 ### Fixed
 - fixed result ommission on put requests

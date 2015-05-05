@@ -3,9 +3,10 @@ var bodyParser = require("body-parser");
 var _ = require("lodash");
 
 
-module.exports = function() {
+module.exports = function(options) {
+  var options = options || {};
   var viewApp = express();
-  viewApp.use(bodyParser.json());
+  viewApp.use(bodyParser.json(options.bodyParser || {}));
 
   return {
     route: function(routePath, handler, opts) {
