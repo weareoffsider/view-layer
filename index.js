@@ -39,6 +39,8 @@ module.exports = function(options) {
         if (result.then) {
           result.then(function(out) {
             res.type("html").send( out );
+          }).catch(function(e) {
+            res.status(500).send(e.message);
           });
         } else {
           res.type("html").send( result );
